@@ -1,5 +1,6 @@
 import React from "react";
 import users from "./users.json";
+import UserInfo from "./component/UserInfo";
 
 class App extends React.Component {
   constructor() {
@@ -13,9 +14,11 @@ class App extends React.Component {
         {users.map((user) => {
           return (
             <div>
-              <p>{user.name}</p>
-              <p>{user.email}</p>
-              <p>{user.website}</p>
+              <UserInfo
+                userName={user.name}
+                userEmail={user.email}
+                // userWebSite={user.website}
+              ></UserInfo>
             </div>
           );
         })}
